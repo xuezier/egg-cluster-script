@@ -1,6 +1,6 @@
 {
   "name": "egg-cluster-script",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "egg cluster start bin",
   "bin": {
     "eggcbl": "bin/egg-cluster-bin.js",
@@ -16,6 +16,11 @@
     "cluster",
     "eggjs"
   ],
+  "homepage": "https://github.com/xuezier/egg-cluster-script",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuezier/egg-cluster-script"
+  },
   "author": "xuezi",
   "license": "ISC",
   "dependencies": {
