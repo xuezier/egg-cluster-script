@@ -1,0 +1,31 @@
+{
+  "name": "egg-cluster-script",
+  "version": "0.1.0",
+  "description": "egg cluster start bin",
+  "bin": {
+    "eggcbl": "bin/egg-cluster-bin.js",
+    "egg-cluster-bin": "bin/egg-cluster-bin.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "egg",
+    "bin",
+    "cluster",
+    "eggjs"
+  ],
+  "author": "xuezi",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "egg": "^2.14.2",
+    "moment": "^2.23.0",
+    "mz": "^2.7.0",
+    "mz-modules": "^2.1.0",
+    "node-ipc": "^9.1.1",
+    "runscript": "^1.3.0",
+    "zlogger": "^2.0.0"
+  }
+}
