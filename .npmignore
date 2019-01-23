@@ -10,3 +10,6 @@
 config.gypi
 CVS
 npm-debug.log
+test
+.vscode
+run
