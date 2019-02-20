@@ -168,6 +168,7 @@ module.exports = class Command {
             else {
                 logger.info('start egg app: %s', title);
                 await require('./lib/start').start(argvs);
+                logger.info(`[${title}] success started`);
             }
         });
     }

@@ -6,14 +6,17 @@ const cluster = require('cluster');
 const events = require('events');
 
 const ipc = require('node-ipc');
-const fs = require('mz/fs');
+
+const logger = require('../lib/logger');
 
 if(cluster.isMaster) {
 
     const options = JSON.parse(process.argv[2]);
     require('egg').startCluster(options);
+    console.log(options);
+    const { title } = options;
 
-    ipc.config.id = 'egg-worker-unique-process';
+    ipc.config.id = 'egg-worker-unique-process' + title;
     ipc.config.retry = 1500;
     ipc.config.silent = true;
     ipc.serve(() => ipc.server.on('egg-worker-unique-message', async pid => {

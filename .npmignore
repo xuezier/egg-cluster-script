@@ -13,3 +13,6 @@ npm-debug.log
 test
 .vscode
 run
+
+logs
+package-lock.json

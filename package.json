@@ -1,6 +1,6 @@
 {
   "name": "egg-cluster-script",
-  "version": "0.1.3",
+  "version": "0.1.7",
   "description": "egg cluster start bin",
   "bin": {
     "eggcbl": "bin/egg-cluster-bin.js",

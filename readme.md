@@ -38,6 +38,28 @@ option|description|value type
 
 *title 参数使用在所有的命令中*
 
+## closehook
+在worker重启的过程中，应该及时切走流量，让正在重启的 worker 不再接收新的请求，并在超时时间内处理好已经连接的请求，
+
+如果正在连接的请求超过了超时时间，那么 worker 就已经被关闭了，这些请求会返回错误
+```javascript
+//app.js
+
+module.exports = app => {
+
+    app.beforeClose(async() => {
+        const server = app.server;
+        // 在worker重启的时候，禁止新的请求访问
+        server.close();
+        // 访问请求超时
+        await new Promise(resolve => setTimeout(resolve, 5000));
+    });
+
+}
+
+```
+app-worker 在接收到关闭命令的时候，会触发这个钩子，终止新的请求，并在 5s 后被关闭，如果 5s 内已请求的连接没有完成，会被释放
+
 ## todo
 - ✅ 添加command: startOrReload 自动判断是否需要启动或重启
 - 支持所有egg-script参数
