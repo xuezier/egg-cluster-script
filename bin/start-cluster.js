@@ -10,10 +10,8 @@ const ipc = require('node-ipc');
 const logger = require('../lib/logger');
 
 if(cluster.isMaster) {
-
     const options = JSON.parse(process.argv[2]);
     require('egg').startCluster(options);
-    console.log(options);
     const { title } = options;
 
     ipc.config.id = 'egg-worker-unique-process' + title;
