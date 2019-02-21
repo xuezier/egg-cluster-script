@@ -24,7 +24,7 @@ npx egg-cluster-bin <command> [...options]
 |startOrReload|启动/重启服务，自动根据 title 判断|
 
 ### Options
-参数在作用于服务启动的时候
+参数在作用于服务启动的时候
 
 |option|description|value type|
 |------|-----------|-----|
