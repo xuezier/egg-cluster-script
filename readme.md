@@ -12,7 +12,7 @@ npm install egg-cluster-script --save-dev
 
 ## usage
 ```
-npx egg-cluster-script <command> [...options]
+npx egg-cluster-bin <command> [...options]
 ```
 
 ### Command
