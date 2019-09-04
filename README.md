@@ -3,8 +3,6 @@
 
 支持 egg-script 启动日志
 
-*采用 ipc 通信代替 agent-worker 管理 worker 的重启*，官方的 agent-worker 太复杂，先代替一下
-
 ## installation
 ```bash
 npm install egg-cluster-script --save-dev
